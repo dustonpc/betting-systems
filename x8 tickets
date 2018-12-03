@@ -1,0 +1,115 @@
+
+package betting;
+
+import java.util.Random;
+
+/**
+ * Confirming if this betting theory works
+ * https://www.youtube.com/watch?v=XAdU_P9m1J8
+ * 
+ * 
+ * @author dustonpc
+ */
+public class Betting
+{
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args)
+    {
+        Random r = new Random();
+        float money = 100; // starting budget
+        int bets = 100; // how many time to use this betting system
+        
+        for(int i=0; i < bets; i++){
+            money -= 8; // bet money on 8 possible tickets
+            
+            int x = r.nextInt(28); // get outcome on tickets 27 possibilities
+            switch(x){ 
+                case 1:
+                    money += 3.07;
+                    break;
+                case 2:
+                    money += 6.04;
+                    break;
+                case 3:
+                    money += 6.16;
+                    break;
+                case 4:
+                    money += 12.12;
+                    break;
+                case 5:
+                    money += 2.99;
+                    break;
+                case 6:
+                    money += 2.97;
+                    break;
+                case 7:
+                    money += 3.09;
+                    break;
+                case 8:
+                    money += 6.08;
+                    break;
+                case 9:
+                    money += 5.96;
+                    break;
+                case 10:
+                    money += 24.66;
+                    break;
+                case 11:
+                    money += 12.28;
+                    break;
+                case 12:
+                    money += 12.98;
+                    break;
+                case 13:
+                    money += 6.25;
+                    break;
+                case 14:
+                    money += 6.08;
+                    break;
+                case 15:
+                    money += 6.04;
+                    break;
+                case 16:
+                    money += 6.27;
+                    break;
+                case 17:
+                    money += 12.37;
+                    break;
+                case 18:
+                    money += 12.12;
+                    break;
+                case 19:
+                    money += 3.09;
+                    break;
+                case 20:
+                    money += 6.38;
+                    break;
+                case 21:
+                    money += 6.25;
+                    break;
+                case 22:
+                    money += 12.54;
+                    break;
+                case 23:
+                    money += 3.18;
+                    break;
+                case 24:
+                    money += 6.29;
+                    break;
+                case 25:
+                    money += 6.16;
+                    break;
+                case 26:
+                    money += 3.20;
+                    break;
+                case 27:
+                    money += 3.07;
+                    break;
+            }
+        }
+        System.out.print(money);
+    }
+}
